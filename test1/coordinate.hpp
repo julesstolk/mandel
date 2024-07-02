@@ -1,5 +1,4 @@
-#ifndef COORDINATE_H
-#define COORDINATE_H
+#pragma once
 
 #include <iostream>
 #include <opencv2/imgproc.hpp>
@@ -7,19 +6,14 @@
 using namespace std;
 
 class Coordinate {
-private:
+public:
 	int x;
 	int y;
 	int value;
-public:
 	Coordinate(int xcoord, int ycoord, int val) {
 		x = xcoord;
 		y = ycoord;
 		value = val;
 	}
-	void setValue(int val);
-	int getValue();
 	cv::Point getPoint();
 };
-
-#endif

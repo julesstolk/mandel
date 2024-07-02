@@ -29,7 +29,7 @@ void Screen::show()
 	Mat img(sizex, sizey, CV_8UC1, Scalar(255));
 
 	for (Coordinate coord : coordinates) {
-		img.at<uchar>(coord.getPoint()) = coord.getValue();
+		img.at<uchar>(coord.getPoint()) = coord.value;
 	}
 
 	imshow("Mandelbrot", img);

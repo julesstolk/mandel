@@ -1,5 +1,8 @@
+#pragma once
+
 #include <iostream>
 #include <complex>
+#include "coordinate.hpp"
 using namespace std;
 
 class Mandel {
@@ -12,4 +15,5 @@ public:
 		maxiter = x;
 	}
 	int calcIter(complex<double> num);
+	int calcIter(Coordinate coord);
 };

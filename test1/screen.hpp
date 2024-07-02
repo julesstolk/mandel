@@ -1,9 +1,7 @@
-#ifndef SCREEN_H
-#define SCREEN_H
+#pragma once
 
 #include <iostream>
 #include <vector>
-
 #include "coordinate.hpp"
 
 using namespace std;
@@ -12,8 +10,8 @@ class Screen {
 private:
 	vector<Coordinate> coordinates;
 public:
-	int sizex;
-	int sizey;
+	int sizex = 0;
+	int sizey = 0;
 	Screen(int x, int y) {
 		sizex = x;
 		sizey = y;
@@ -23,12 +21,11 @@ public:
 			}
 		}
 	};
-	Screen() {};
+	Screen() {
+	};
 	void addCoordinate(Coordinate coord);
 	vector<Coordinate> getCoordinates();
 	cv::Point getCorrectedPoint(Coordinate coord);
 	void editCoordinate(Coordinate c, int i);
 	void show();
 };
-
-#endif
