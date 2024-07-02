@@ -1,5 +1,7 @@
-#include <iostream>
+#pragma once
+
 #include <vector>
+#include "coordinate.hpp"
 
 using namespace std;
 

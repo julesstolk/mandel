@@ -1,16 +1,16 @@
-#include <iostream>
-#include "screen.hpp"
+#pragma once
+
 #include <opencv2/imgproc.hpp>
+#include "screen.hpp"
 
 using namespace std;
 
 class Coordinate {
-private:
+public:
 	int x;
 	int y;
 	Screen screen;
 	int value;
-public:
 	Coordinate(int xcoord, int ycoord, Screen thisScreen, int val) {
 		x = xcoord;
 		y = ycoord;

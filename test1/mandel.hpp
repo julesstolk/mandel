@@ -1,4 +1,5 @@
-#include <iostream>
+#pragma once
+
 #include <complex>
 using namespace std;
 
@@ -10,6 +11,7 @@ public:
 	int maxiter;
 	Mandel(int x) {
 		maxiter = x;
-	}
+	};
 	int calcIter(complex<double> num);
+	int calcIter(Coordinate coord);
 };
