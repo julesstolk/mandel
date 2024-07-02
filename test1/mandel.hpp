@@ -13,7 +13,7 @@ public:
 	int maxiter;
 	Mandel(int x) {
 		maxiter = x;
-	}
+	};
 	int calcIter(complex<double> num);
 	int calcIter(Coordinate coord);
 };

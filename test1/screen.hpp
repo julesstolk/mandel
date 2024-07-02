@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include "coordinate.hpp"
+#include <iostream>
 
 using namespace std;
 

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <opencv2/imgproc.hpp>
 
 using namespace std;
 
