@@ -16,9 +16,9 @@ public:
 	Screen(int x, int y) {
 		sizex = x;
 		sizey = y;
-		for (int i = -(x/2); i < x/2; i++) {
-			for (int j = y/2; j < -(y/2); j++) {
-				coordinates.push_back(Coordinate(x, y, 0));
+		for (int i = 0; i < x; i++) {
+			for (int j = 0; j < y; j++) {
+				coordinates.push_back(Coordinate(x - (sizex/2), y - (sizey/2), 0));
 			}
 		}
 	};

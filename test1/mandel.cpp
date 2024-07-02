@@ -11,12 +11,6 @@ int Mandel::calcIter(complex<double> num) {
 
 int Mandel::calcIter(Coordinate coord)
 {
-	complex<double> z1 = complex<double>(coord.x, coord.y);
-	return calcIter(z1);
-}
-
-int Mandel::calcIter(Coordinate coord)
-{
 	complex<double> num(coord.x, coord.y);
 	return calcIter(num);
 }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <opencv2/imgcodecs.hpp>
 
 using namespace std;
 
@@ -15,4 +16,4 @@ public:
 		value = val;
 	}
 	cv::Point getPoint();
-};
+};	

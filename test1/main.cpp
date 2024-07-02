@@ -7,19 +7,20 @@
 using namespace std;
 
 const int miniter = 0;
-const int maxiter = 20000;
+const int maxiter = 200;
 
-const int height = 1920;
-const int width = 1080;
+const int height = 500;
+const int width = 1000;
 
 int main() {
 
-	Screen newScreen(width, height);
+	Screen newScreen(height, width);
 	Mandel mandel(maxiter);
 	Shader shader;
 
 	for (int i = 0; i < newScreen.getCoordinates().size(); i++)
 	{
+		cout << i / (height * width) << endl;
 		Coordinate coord(newScreen.getCoordinates().at(i));
 		int value = shader.greyScale(miniter, maxiter, mandel.calcIter(coord));
 		newScreen.editCoordinate(Coordinate(coord.x, coord.y, value), i);
