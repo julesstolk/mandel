@@ -136,12 +136,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mandel.cpp" />
     <ClCompile Include="coordinate.cpp" />
+    <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="coordinate.hpp" />
     <ClInclude Include="screen.hpp" />
     <ClInclude Include="mandel.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="shader.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="test1.rc" />

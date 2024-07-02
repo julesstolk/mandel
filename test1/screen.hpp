@@ -1,10 +1,6 @@
-#ifndef SCREEN_H
-#define SCREEN_H
-
-#include <iostream>
 #include <vector>
-
 #include "coordinate.hpp"
+#include <iostream>
 
 using namespace std;
 

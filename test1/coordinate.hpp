@@ -1,13 +1,11 @@
-#ifndef COORDINATE_H
-#define COORDINATE_H
-
-#include <iostream>
 #include <opencv2/imgproc.hpp>
+#include "screen.hpp"
+#include <iostream>
 
 using namespace std;
 
 class Coordinate {
-private:
+public:
 	int x;
 	int y;
 	int value;
