@@ -19,6 +19,10 @@ void Screen::editCoordinate(Coordinate c, int i)
 {
 	coordinates.at(i) = c;
 }
+cv::Point Screen::getCorrectedPoint(Coordinate coord) {
+	cv::Point point = coord.getPoint();
+	return cv::Point(point.x + (sizex / 2), (- 1 * point.y + (sizey / 2)));
+}
 
 void Screen::show()
 {

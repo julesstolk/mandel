@@ -15,5 +15,5 @@ int Coordinate::getValue()
 
 cv::Point Coordinate::getPoint()
 {
-	return cv::Point(x + (screen.sizex / 2), (- 1 * y + (screen.sizey / 2)));
+	return cv::Point(x, y);
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "mandel.hpp"
-#include "coordinate.hpp"
 #include "screen.hpp"
+#include "coordinate.hpp"
 
 using namespace std;
 
