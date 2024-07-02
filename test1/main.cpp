@@ -33,8 +33,6 @@ int main() {
 		newScreen.editCoordinate(Coordinate(correctedPoint.x, correctedPoint.y, value), i);
 	}
 
-	cout << "ya" << endl;
-
 	newScreen.show();
 
 	return 0;

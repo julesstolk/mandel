@@ -23,5 +23,5 @@ int Mandel::recursiveIter(complex<double> num, complex<double> onum, int i) {
 
 	num = (num * num) + onum;
 
-	return (abs(num) > 2) || (i >= maxiter) ? i : recursiveIter(num, onum, ++i);
+	return ((abs(num) > 2) || (i >= maxiter)) ? i : recursiveIter(num, onum, ++i);
 }
