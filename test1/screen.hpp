@@ -13,9 +13,9 @@ private:
 public:
 	int sizex = 0;
 	int sizey = 0;
-	Screen(int x, int y) {
-		sizex = x;
+	Screen(int y, int x) {
 		sizey = y;
+		sizex = x;
 		for (int i = 0; i < x; i++) {
 			for (int j = 0; j < y; j++) {
 				coordinates.push_back(Coordinate(x - (sizex/2), y - (sizey/2), 0));

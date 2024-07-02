@@ -27,10 +27,11 @@ cv::Point Screen::getCorrectedPoint(Coordinate coord) {
 
 void Screen::show()
 {
-	Mat img(sizex, sizey, CV_8UC1, Scalar(255));
+	Mat img(sizey, sizex, CV_8UC1, Scalar(255));
 
 	for (Coordinate coord : coordinates) {
-		img.at<uchar>(coord.getPoint()) = coord.value;
+		Point pt = coord.getPoint();
+		img.at<uchar>(pt.y, pt.x) = coord.value;
 	}
 
 	imshow("Mandelbrot", img);

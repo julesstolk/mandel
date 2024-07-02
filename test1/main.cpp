@@ -9,8 +9,8 @@ using namespace std;
 const int miniter = 0;
 const int maxiter = 200;
 
-const int height = 500;
-const int width = 1000;
+const int height = 1080;
+const int width = 1920;
 
 int main() {
 
