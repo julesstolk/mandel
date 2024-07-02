@@ -1,9 +1,11 @@
+#include <iostream>
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 #include "screen.hpp"
 #include "coordinate.hpp"
 
+using namespace std;
 using namespace cv;
 
 void Screen::addCoordinate(Coordinate coord)
@@ -13,7 +15,7 @@ void Screen::addCoordinate(Coordinate coord)
 
 vector<Coordinate> Screen::getCoordinates()
 {
-	return vector<Coordinate>();
+	return coordinates;
 }
 
 void Screen::editCoordinate(Coordinate c, int i)
@@ -32,6 +34,7 @@ void Screen::show()
 
 	for (Coordinate coord : coordinates) {
 		Point pt = coord.getPoint();
+		cout << coord.value;
 		img.at<uchar>(pt.y, pt.x) = coord.value;
 	}
 

@@ -21,7 +21,7 @@ public:
 				coordinates.push_back(Coordinate(i - (sizex/2), j - (sizey/2), 0));
 			}
 		}
-		cout << coordinates.size(); // line B
+		cout << "Screen constructor: " << coordinates.size() << endl;
 	};
 	Screen() {
 	};

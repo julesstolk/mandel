@@ -11,8 +11,8 @@ using namespace cv;
 const int miniter = 0;
 const int maxiter = 200;
 
-const int height = 500;
-const int width = 700;
+const int height = 50;
+const int width = 70;
 
 int main() {
 
@@ -20,16 +20,22 @@ int main() {
 	Mandel mandel(maxiter);
 	Shader shader;
 
-	cout << newScreen.getCoordinates().size();
+	cout << newScreen.getCoordinates().size() << endl;
 
-	for (int i = 0; i < newScreen.getCoordinates().size(); i++)
+	for (int i = 0; i < newScreen.getCoordinates().size() - 1; i++)
 	{
-		cout << i / (height * width) << endl;
+		cout << i << endl;
 		Coordinate coord(newScreen.getCoordinates().at(i));
+		cout << "ya" << endl;
 		Point correctedPoint = newScreen.getCorrectedPoint(coord);
+		cout << "ya" << endl;
 		int value = shader.greyScale(miniter, maxiter, mandel.calcIter(coord));
 		newScreen.editCoordinate(Coordinate(correctedPoint.x, correctedPoint.y, value), i);
 	}
 
+	cout << "ya" << endl;
+
 	newScreen.show();
+
+	return 0;
 }

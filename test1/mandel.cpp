@@ -19,6 +19,8 @@ int Mandel::calcIter(Coordinate coord)
 
 int Mandel::recursiveIter(complex<double> num, complex<double> onum, int i) {
 
+	cout << "ya " << num << ", " << onum << endl;
+
 	num = (num * num) + onum;
 
 	return (abs(num) > 2) ? i : recursiveIter(num, onum, i++);
