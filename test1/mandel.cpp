@@ -1,6 +1,7 @@
 #include "mandel.hpp"
 #include "coordinate.hpp"
 #include <complex>
+#include <iostream>
 
 using namespace std;
 
@@ -12,6 +13,7 @@ int Mandel::calcIter(complex<double> num) {
 int Mandel::calcIter(Coordinate coord)
 {
 	complex<double> num(coord.x, coord.y);
+	int amtiter = calcIter(num);
 	return calcIter(num);
 }
 

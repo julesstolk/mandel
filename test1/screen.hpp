@@ -18,9 +18,10 @@ public:
 		sizex = x;
 		for (int i = 0; i < x; i++) {
 			for (int j = 0; j < y; j++) {
-				coordinates.push_back(Coordinate(x - (sizex/2), y - (sizey/2), 0));
+				coordinates.push_back(Coordinate(i - (sizex/2), j - (sizey/2), 0));
 			}
 		}
+		cout << coordinates.size(); // line B
 	};
 	Screen() {
 	};
