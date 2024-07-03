@@ -1,4 +1,5 @@
 #include "shader.hpp"
+#include <iostream>
 
 double Shader::greyScale(int min, int max, int val)
 {

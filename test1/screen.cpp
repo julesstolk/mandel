@@ -25,16 +25,16 @@ void Screen::editCoordinate(Coordinate c, int i)
 
 cv::Point Screen::getCorrectedPoint(Coordinate coord) {
 	cv::Point point = coord.getPoint();
+	int px = point.x, py = point.y;
 	return cv::Point(point.x + (sizex / 2), (- 1 * point.y + (sizey / 2)));
 }
 
 void Screen::show()
 {
-	Mat img(sizey, sizex, CV_8UC1, Scalar(255));
+	Mat img(sizey + 1, sizex + 1, CV_8UC1, Scalar(255));
 
 	for (Coordinate coord : coordinates) {
 		Point pt = coord.getPoint();
-		cout << coord.value;
 		img.at<uchar>(pt.y, pt.x) = coord.value;
 	}
 

@@ -16,4 +16,4 @@ public:
 		value = val;
 	}
 	cv::Point getPoint();
-};	
+};

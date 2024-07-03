@@ -9,27 +9,31 @@ using namespace std;
 using namespace cv;
 
 const int miniter = 0;
-const int maxiter = 200;
+const int maxiter = 20;
 
-const int height = 50;
-const int width = 70;
+const int pixelrows = 700;
+const int pixelcolumns = 500;
+
+const int minx = -2;
+const int maxx = 2;
+const int miny = -2;
+const int maxy = 2;
 
 int main() {
 
-	Screen newScreen(height, width);
+	Screen newScreen(pixelrows, pixelcolumns, minx, maxx, miny, maxy);
 	Mandel mandel(maxiter);
 	Shader shader;
 
-	cout << newScreen.getCoordinates().size() << endl;
+	cout << "Total amount of coordinates: " << newScreen.getCoordinates().size() << endl;
+	double progress;
 
 	for (int i = 0; i < newScreen.getCoordinates().size() - 1; i++)
 	{
-		cout << i << endl;
 		Coordinate coord(newScreen.getCoordinates().at(i));
-		cout << "ya" << endl;
 		Point correctedPoint = newScreen.getCorrectedPoint(coord);
-		cout << "ya" << endl;
-		int value = shader.greyScale(miniter, maxiter, mandel.calcIter(coord));
+		int iter = mandel.calcIter(coord);
+		int value = shader.greyScale(miniter, maxiter, iter);
 		newScreen.editCoordinate(Coordinate(correctedPoint.x, correctedPoint.y, value), i);
 	}
 

@@ -14,12 +14,10 @@ int Mandel::calcIter(Coordinate coord)
 {
 	complex<double> num(coord.x, coord.y);
 	int amtiter = calcIter(num);
-	return calcIter(num);
+	return amtiter;
 }
 
 int Mandel::recursiveIter(complex<double> num, complex<double> onum, int i) {
-
-	cout << "ya " << num << ", " << onum << endl;
 
 	num = (num * num) + onum;
 
