@@ -11,8 +11,8 @@ using namespace cv;
 const int miniter = 0;
 const int maxiter = 20;
 
-const int pixelrows = 700;
-const int pixelcolumns = 500;
+const int pixelrows = 70;
+const int pixelcolumns = 50;
 
 const int minx = -2;
 const int maxx = 2;
